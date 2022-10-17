@@ -76,4 +76,20 @@ class Carousel(models.Model):
 
 
 
-    
+class managestaff(models.Model):
+    name=models.CharField(max_length=50)
+    task=models.CharField(max_length=100)
+    image=models.ImageField(upload_to="personimages")
+    description=RichTextField()
+    linkedin_adress=models.TextField(null=True)
+    instagram_adress=models.TextField(null=True)
+    mail=models.TextField(null=True)
+    is_active=models.BooleanField(default=False)
+    slug=models.SlugField(null=False,blank=True,unique=True,db_index=True)
+
+    def __str__(self):
+        return f"{self.task}"
+
+    def save(self, *args, **kwargs):
+      self.slug = slugify(self.name)
+      super().save(*args, **kwargs)   

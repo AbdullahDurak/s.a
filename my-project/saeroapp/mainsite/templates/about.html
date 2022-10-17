@@ -126,7 +126,7 @@
 
 
     <section class="bg-light">
-    <div class="container mt-5 mb-5 bg-light">
+    <div class="container mt-5 bg-light">
         <div class="row text-center py-3">
             <div class="col-lg-6 m-auto">
                 <h1 class="h1">Meet Our Manage Team</h1>
@@ -137,62 +137,18 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4 col-sm-6 mb-3">
-                <div class="our-team">
-                    <div class="pic">
-                        <img src="{% static 'mainsite/img/11.jpg' %}">
-                        <ul class="social">
-                            <li><a href="#" class="fab fa-facebook"></a></li>
-                            <li><a href="#" class="fab fa-google-plus"></a></li>
-                            <li><a href="#" class="fab fa-instagram"></a></li>
-                            <li><a href="#" class="fab fa-linkedin"></a></li>
-                        </ul>
-                    </div>
-                    <div class="team-content">
-                        <h3 class="title">Murat Sağın</h3>
-                        <span class="post">Web Developer</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="our-team">
-                    <div class="pic">
-                        <img src="{% static 'mainsite/img/11.jpg' %}">
-                        <ul class="social">
-                            <li><a href="#" class="fab fa-facebook"></a></li>
-                            <li><a href="#" class="fab fa-google-plus"></a></li>
-                            <li><a href="#" class="fab fa-instagram"></a></li>
-                            <li><a href="#" class="fab fa-linkedin"></a></li>
-                        </ul>
-                    </div>
-                    <div class="team-content">
-                        <h3 class="title">Kristiana</h3>
-                        <span class="post">Web Designer</span>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-md-4 col-sm-6">
-                <div class="our-team">
-                    <div class="pic">
-                        <img src="{% static 'mainsite/img/11.jpg' %}">
-                        <ul class="social">
-                            <li><a href="#" class="fab fa-facebook"></a></li>
-                            <li><a href="#" class="fab fa-google-plus"></a></li>
-                            <li><a href="#" class="fab fa-instagram"></a></li>
-                            <li><a href="#" class="fab fa-linkedin"></a></li>
-                        </ul>
-                    </div>
-                    <div class="team-content">
-                        <h3 class="title">Kristiana</h3>
-                        <span class="post">Web Designer</span>
-                    </div>
-                </div>
-            </div>
+             
+            {% for person in persons  %}
+                    
+            {% include 'mainsite/partials/_mteam.html' %}
+
+            
+            {% endfor %}
+           
         </div>
     </div>
 </section>
-    
     
 
     <!-- Start Section -->

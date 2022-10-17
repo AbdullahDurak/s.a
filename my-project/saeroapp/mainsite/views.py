@@ -2,7 +2,7 @@ from django.http.response import HttpResponse
 from pickle import TRUE
 from unicodedata import category
 from django.shortcuts import render
-from .models import staff, Category, Sponsors,Carousel
+from .models import staff, Category, Sponsors,Carousel,managestaff
 
 
 
@@ -48,7 +48,8 @@ def index(request):
 def about(request):
     teams=Category.objects.all()
     context={
-        "teams":teams
+        "teams":teams,
+        "persons":managestaff.objects.filter(is_active=True),
     }
     return render(request,"about.html",context)
 
@@ -66,6 +67,14 @@ def team_details(request,slug):
         "team":team,
         "person":staff.objects.get(slug=slug)
     })
+
+
+def manageteam_details(request,slug):
+    team=managestaff.objects.get(slug=slug)
+    return render(request,"manageteam-detail.html",{
+        "team":team,
+        "person":managestaff.objects.get(slug=slug)
+    })    
 
 def staff_by_category(request,slug):
     context={

@@ -1,0 +1,26 @@
+{% load static %}
+
+{% block content %}
+
+<div class="col-md-4 col-sm-6 mb-3">
+    <div class="our-team">
+        <div class="pic">
+            <img class="card-img rounded-0 img-fluid" src="{{person.image.url}}">
+            {% comment %} <img src="{% static 'mainsite/img/11.jpg' %}"> {% endcomment %}
+            <ul class="social">
+                <li><a href="{{ person.linkedin_adress }}" class="fab fa-linkedin"></a></li>
+                <li><a href="mailto:{{person.mail}}" class="fa-solid fa-envelope"></a></li>
+                <li><a href="{{ person.instagram_adress }}" class="fab fa-instagram"></a></li>
+            </ul>
+        </div>
+        
+        <div class="team-content">
+            <a href="{% url 'manageteam-detail' person.slug %}"><h3 class="title">{{person.name}}</h3></a
+            <span class="post">{{person.task}}</span>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock  %}
