@@ -64,7 +64,7 @@
         <div class="carousel-inner">
             {% for object in obj%}
             <div class="carousel-item {% if forloop.counter0 == 0 %}active{% endif %}">
-                <img src="{{object.image.url}}" style="height:650px;" class="testi-overly d-block w-100" alt="sliderImg">
+                <img src="{{object.image.url}}" style="height:850px;" class="testi-overly d-block w-100" alt="sliderImg">
                 <div class="carousel-caption d-none d-md-block">
                     <h1 class="animate__animated
                     {% if forloop.counter0 == 0 %}
@@ -90,11 +90,11 @@
     <!-- sanem section -->
     <section class="about bg-white">
         
-        <div class="content">
+        <div class="content bg-light">
            
             <img src="{% static 'mainsite/img/15.jpg' %}" alt="">
         </div>
-        <div class="text">
+        <div class="text-loc">
             <h1 class="">Space Aero Technology</h1>
             
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto quaerat enim necessitatibus quos autem est voluptatum unde consectetur cupiditate, animi velit sapiente accusantium exercitationem eum nemo 
@@ -108,68 +108,78 @@
     </section>
 
 
+    <div class="container mb-5 ">
+        <div class="row">
+
+            <div class="d-flex justify-content-center galeritext mb-5">
+                <h1>Gallery</h1>
+            </div>
+            <div class="leftpadtext fst-italic mb-5">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, totam ipsa aliquid voluptatibus inventore ut distinctio veniam aspernatur.</p>
+        </div>
+            
+            <div class="col-md-6 col-sm-6 mb-4 mt-5 h-100">
+                <div class="box">
+                    <img src="{% static 'mainsite/img/a4.jpeg' %}">
+                    <div class="box-content">
+                        <ul class="icon">
+                            <li><a href="#"><i class="fa fa-search"></i></a></li>
+                            <li><a href="#"><i class="fa fa-link"></i></a></li>
+                        </ul>
+                        <h3 class="title">Williamson</h3>
+                        <span class="post">Web designer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 mt-5 mb-4">
+                <div class="box">
+                    <img src="{% static 'mainsite/img/a4.jpeg' %}">
+                    <div class="box-content">
+                        <ul class="icon">
+                            <li><a href="#"><i class="fa fa-search"></i></a></li>
+                            <li><a href="#"><i class="fa fa-link"></i></a></li>
+                        </ul>
+                        <h3 class="title">Miranda Roy</h3>
+                        <span class="post">Web designer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6 mb-4">
+                <div class="box">
+                    <img src="{% static 'mainsite/img/a4.jpeg' %}">
+                    <div class="box-content">
+                        <ul class="icon">
+                            <li><a href="#"><i class="fa fa-search"></i></a></li>
+                            <li><a href="#"><i class="fa fa-link"></i></a></li>
+                        </ul>
+                        <h3 class="title">Miranda Roy</h3>
+                        <span class="post">Web designer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6 mb-4">
+                <div class="box">
+                    <img src="{% static 'mainsite/img/a4.jpeg' %}">
+                    <div class="box-content">
+                        <ul class="icon">
+                            <li><a href="#"><i class="fa fa-search"></i></a></li>
+                            <li><a href="#"><i class="fa fa-link"></i></a></li>
+                        </ul>
+                        <h3 class="title">Miranda Roy</h3>
+                        <span class="post">Web designer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- End sanem section -->
 
-    <section class="u-clearfix u-white u-section-2 bg-white mt-5" id="sec-d58b">
-        <div class="container ">
-        <div class="u-clearfix u-sheet u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-sheet-1">
-          <div class="u-palette-2-base u-shape u-shape-rectangle u-shape-1"></div>
-          <div class="u-gallery u-layout-grid u-lightbox u-show-text-on-hover u-gallery-1" data-pswp-uid="1">
-            <div class="u-gallery-inner u-gallery-inner-1">
-              <div class="u-effect-fade u-gallery-item" >
-                <div class="u-back-slide" >
-                  <img class="u-back-image u-expanded" src="{% static 'mainsite/img/1.jpg' %}">
-                </div>
-                
-              </div>
-              <div class="u-effect-fade u-gallery-item" >
-                <div class="u-back-slide" >
-                    <img src="" alt="">
-                  <img class="u-back-image u-expanded" src="{% static 'mainsite/img/b.jpg' %}">
-
-                </div>
-                
-              </div>
-              <div class="u-effect-fade u-gallery-item" >
-                <div class="u-back-slide" >
-                  <img class="u-back-image u-expanded" src="{% static 'mainsite/img/c.jpg' %}">
-                </div>
-                
-              </div>
-              <div class="u-effect-fade u-gallery-item" >
-                <div class="u-back-slide" >
-                  <img class="u-back-image u-expanded" src="{% static 'mainsite/img/d.jpg' %}">
-                </div>
-                
-              </div>
-              <div class="u-effect-fade u-gallery-item" >
-                <div class="u-back-slide" >
-                  <img class="u-back-image u-expanded" src="{% static 'mainsite/img/e.jpg' %}">
-                </div>
-                
-              </div>
-              <div class="u-effect-fade u-gallery-item" >
-                <div class="u-back-slide" >
-                  <img class="u-back-image u-expanded" src="{% static 'mainsite/img/f.jpg' %}">
-                </div>
-                
-              </div>
-            </div>
-          </div>
-          
-          <div class="u-align-left u-container-style u-group u-palette-1-base u-group-1">
-            <div class="u-container-layout u-valign-middle u-container-layout-1">
-              <h1 class="u-fb ">Portföyümüz</h1>
-              <p class="u-fb ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda obcaecati expedita soluta aliquid earum dolorum ex nobis non perspiciatis. Ipsum autem porro expedita officiis dolores pariatur laboriosam cumque quas nisi. </p>
-              
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-
+    
+    
     <!-- Start Featured Product -->
     <section class="bg-light">
         <div class="container py-5">
