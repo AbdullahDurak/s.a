@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models  import Category, staff,Sponsors,Carousel,managestaff
+from .models  import Category, staff,Sponsors,Carousel,managestaff,gallery,homeintro,teams
 
 
 
@@ -14,6 +14,12 @@ admin.site.register(Category)
 admin.site.register(Sponsors)
 admin.site.register(Carousel)
 admin.site.register(managestaff, FirstAdmin)
+admin.site.register(gallery)
+admin.site.register(homeintro)
+admin.site.register(teams)
+
+
+
 
 
 

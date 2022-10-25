@@ -9,8 +9,8 @@
     <link rel="apple-touch-icon" href="{% static 'mainsite/img/logo2.ico'%}">
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'mainsite/img/logo2.ico' %}">
     <link rel="stylesheet" href="{% static 'mainsite/css/bootstrap.min.css'%}">
-    <link rel="stylesheet" href="{% static 'mainsite/css/templatemo2.css' %}">
-    <link rel="stylesheet" href="{% static 'mainsite/css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'mainsite/css/templatemo.css' %}">
+    <link rel="stylesheet" href="{% static 'mainsite/css/custom2.css' %}">
     <link rel="stylesheet" href="{% static 'mainsite/css/base.css' %}">
     <link rel="stylesheet" href="{% static 'mainsite/css/all.min.css' %}">
     <link rel="stylesheet" href="{% static 'mainsite/css/h.css' %}">
@@ -64,7 +64,7 @@
         <div class="carousel-inner">
             {% for object in obj%}
             <div class="carousel-item {% if forloop.counter0 == 0 %}active{% endif %}">
-                <img src="{{object.image.url}}" style="height:850px;" class="testi-overly d-block w-100" alt="sliderImg">
+                <img src="{{object.image.url}}" style="height:750px;" class="testi-overly d-block w-100" alt="sliderImg">
                 <div class="carousel-caption d-none d-md-block">
                     <h1 class="animate__animated
                     {% if forloop.counter0 == 0 %}
@@ -91,90 +91,37 @@
     <section class="about bg-white">
         
         <div class="content bg-light">
-           
-            <img src="{% static 'mainsite/img/15.jpg' %}" alt="">
+           {% for home in homegiris  %}
+            <img src="{{home.image.url}}" alt="">
         </div>
         <div class="text-loc">
-            <h1 class="">Space Aero Technology</h1>
+            <h1 class="">{{home.header}}</h1>
             
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto quaerat enim necessitatibus quos autem est voluptatum unde consectetur cupiditate, animi velit sapiente accusantium exercitationem eum nemo 
-                iusto officiis reprehenderit optio? <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime enim id amet dicta libero labore, cum dolorem error eum, dignissimos eligendi! Magni reprehenderit architecto ut illum perspiciatis sit culpa amet. </p>
-        <div class="btns">
-
+            <p>{{home.explanation|safe}}</p>
         </div>
-
-        </div>
+        {% endfor %}
 
     </section>
 
 
-    <div class="container mb-5 ">
-        <div class="row">
+    <section class="bg-white mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="ith">
+                    <h1>Galeri</h1>     
+                </div>
+                <div class="ppadding">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ea sed, natus tempore ipsum culpa.</p>
+                </div>
+               
+                {% for galerim in galeri %}
+                {% include 'mainsite/partials/_gallery.html' %}
+                {% endfor %}
 
-            <div class="d-flex justify-content-center galeritext mb-5">
-                <h1>Gallery</h1>
-            </div>
-            <div class="leftpadtext fst-italic mb-5">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, totam ipsa aliquid voluptatibus inventore ut distinctio veniam aspernatur.</p>
-        </div>
-            
-            <div class="col-md-6 col-sm-6 mb-4 mt-5 h-100">
-                <div class="box">
-                    <img src="{% static 'mainsite/img/a4.jpeg' %}">
-                    <div class="box-content">
-                        <ul class="icon">
-                            <li><a href="#"><i class="fa fa-search"></i></a></li>
-                            <li><a href="#"><i class="fa fa-link"></i></a></li>
-                        </ul>
-                        <h3 class="title">Williamson</h3>
-                        <span class="post">Web designer</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-6 mt-5 mb-4">
-                <div class="box">
-                    <img src="{% static 'mainsite/img/a4.jpeg' %}">
-                    <div class="box-content">
-                        <ul class="icon">
-                            <li><a href="#"><i class="fa fa-search"></i></a></li>
-                            <li><a href="#"><i class="fa fa-link"></i></a></li>
-                        </ul>
-                        <h3 class="title">Miranda Roy</h3>
-                        <span class="post">Web designer</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-sm-6 mb-4">
-                <div class="box">
-                    <img src="{% static 'mainsite/img/a4.jpeg' %}">
-                    <div class="box-content">
-                        <ul class="icon">
-                            <li><a href="#"><i class="fa fa-search"></i></a></li>
-                            <li><a href="#"><i class="fa fa-link"></i></a></li>
-                        </ul>
-                        <h3 class="title">Miranda Roy</h3>
-                        <span class="post">Web designer</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-sm-6 mb-4">
-                <div class="box">
-                    <img src="{% static 'mainsite/img/a4.jpeg' %}">
-                    <div class="box-content">
-                        <ul class="icon">
-                            <li><a href="#"><i class="fa fa-search"></i></a></li>
-                            <li><a href="#"><i class="fa fa-link"></i></a></li>
-                        </ul>
-                        <h3 class="title">Miranda Roy</h3>
-                        <span class="post">Web designer</span>
-                    </div>
-                </div>
+                
             </div>
         </div>
-    </div>
-
+    </section>
 
     <!-- End sanem section -->
 

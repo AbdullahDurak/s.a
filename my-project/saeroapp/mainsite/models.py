@@ -1,3 +1,4 @@
+from email.mime import image
 from email.policy import default
 from django.db import models
 from django.utils.text import slugify
@@ -93,3 +94,36 @@ class managestaff(models.Model):
     def save(self, *args, **kwargs):
       self.slug = slugify(self.name)
       super().save(*args, **kwargs)   
+
+
+
+class gallery(models.Model):
+  image=models.ImageField(upload_to="galleryimages")
+  explanation=models.CharField(max_length=250)
+  date=models.DateField()
+
+  def __str__(self):
+      return f"{self.date}"        
+
+
+
+
+class homeintro(models.Model):
+    image=models.ImageField(upload_to="homeintimages")
+    header=models.CharField(max_length=50)
+    explanation=RichTextField()
+
+
+
+
+class teams(models.Model):
+      image=models.ImageField(upload_to="teamimages")
+      header=models.CharField(max_length=50)
+      linkedin_adress=models.TextField(null=True)
+      instagram_adress=models.TextField(null=True)
+      mail=models.TextField(null=True)
+
+      def __str__(self):
+       return f"{self.header}"        
+
+

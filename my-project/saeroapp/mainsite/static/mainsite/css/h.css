@@ -156,6 +156,27 @@ html{
     background-color:  #EAF1F7;
     
 }
+
+
+.ith{
+    
+        margin: 1em 0 0.5em 0;
+        color: #343434;
+        font-size: 180px;
+        line-height: 40px;
+        font-weight: normal;
+        text-transform: uppercase;
+        font-family: 'Orienta', sans-serif;
+        letter-spacing: 1px;
+        font-style: italic;
+        padding-left: 580px;
+    
+}
+
+.ppadding{
+    padding-left: 280px;
+
+}
 .mt-5 {
     margin-top: 0px;
 }
@@ -200,131 +221,82 @@ html{
 }
 
 .box{
-    font-family: 'Raleway', sans-serif;
-    box-shadow: rgba(50, 50, 80, 0.5) 0px 14px 18px -12px, rgba(0, 0, 0, 0.8) 0px 14px 15px -13px;
-    border-radius: 7px;
-    position: relative;
+    background: #333;
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
     overflow: hidden;
-}
-.box:before,
-.box:after{
-    content: "";
-    background: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 50%;
-    transform-origin: left;
-    transform: scaleX(0);
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all 0.5s cubic-bezier(0.66, 0.08, 0.19, 0.97);
-}
-.box:after{
-    top: auto;
-    bottom: 0;
-    transition-delay: 0.15s;
-}
-.box:hover:before,
-.box:hover:after{
-    transform: scaleX(1);
+    position: relative;
 }
 .box img{
     width: 100%;
     height: auto;
+    transform: translateX(18px) scale(1.15);
+    transition: all 0.5s ease;
+}
+.box:hover img{
+    opacity: 0.3;
+    transform: translateX(-18px) scale(1.15);
 }
 .box .box-content{
     color: #fff;
     width: 100%;
-    padding: 15px;
+    padding: 0 20px;
+    opacity: 0;
+    transform: translateY(-50%);
     position: absolute;
-    bottom: 0;
+    top: 60%;
     left: 0;
-    z-index: 1;
+    z-index: 2;
+    transition: all 0.5s ease;
+}   
+.box:hover .box-content{
+    opacity: 1;
+    top: 50%;
 }
 .box .title{
-    font-size: 22px;
+    font-size: 25px;
     font-weight: 700;
+    letter-spacing: 1px;
     text-transform: uppercase;
     margin: 0 0 3px;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.3s ease 0s;
 }
 .box .post{
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
+    letter-spacing: 2px;
     font-style: italic;
-    letter-spacing: 1px;
-    text-transform: capitalize;
+    text-transform: uppercase;
     display: block;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.3s ease 0.15s;
-}
-.box:hover .title,
-.box:hover .post{
-    opacity: 1;
-    transform: translateY(0);
 }
 .box .icon{
     padding: 0;
-    margin: 0 0 10px;
+    margin: 0;
     list-style: none;
+    position: absolute;
+    right: -38px;
+    bottom: 0;
+    transition: all 0.5s ease;
 }
-.box .icon li{
-    margin: 0 6px 0 0;
-    display: inline-block;
-    opacity: 0;
-    transform: rotateX(90deg);
-    transition: all .3s ease-in-out 0.2s;
-}
-.box .icon li:nth-child(2){ transition-delay: 0.3s; }
-.box:hover .icon li{
-    opacity: 1;
-    transform: rotateX(0deg);
-}
+.box:hover .icon{ right: 0; }
 .box .icon li a{
-    color: #f3004b;
-    background: #fff;
-    font-size: 18px;
+    color: #fff;
+    background-color: #ed3d1a;
+    font-size: 16px;
     text-align: center;
-    line-height: 34px;
-    height: 34px;
-    width: 34px;
+    line-height: 31px;
+    height: 35px;
+    width: 35px;
+    border: 3px solid #ed3d1a;
     display: block;
-    transition: all .3s ease-in-out;
+    transition: all 0.5s ease;
 }
 .box .icon li a:hover{
-    color: #fff;
-    background: #f3004b;
-    border-radius: 10px 10px;
+    color: #ed3d1a;
+    background-color: #fff;
+    border-radius: 5px;
 }
-@media only screen and (max-width:750px){
+@media only screen and (max-width:990px){
     .box{ margin: 0 0 30px; }
 }
 
 
-.leftpadtext{
-    padding-left: 80px;
-}
-
-
-  .box{
-    height: 500px;
-    width: 600px;
-  }
-  
-  
-
-.galeritext{
-    margin: 1em 0 0.5em 0;
-	color: #6d6b6b;
-	font-size: 2255px;
-	line-height: 40px;
-	font-weight: normal;
-	text-transform: uppercase;
-	font-family: 'Orienta', sans-serif;
-	letter-spacing: 1px;
-	font-style: italic;
-
-}

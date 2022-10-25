@@ -1,8 +1,19 @@
-<div class="carousel-item active">
-    <div class="row">
-        <div class="col-3 p-md-5">
-            <a href="#"><img class="img-fluid brand-img" src="{{team.image.url}}" alt="Brand Logo"></a>
+<div class="col-md-4 col-sm-6">
+    <div class="our-teams">
+        <div class="pic">
+            <img src="{{team.image.url}}">
+            <ul class="social">
+                <li><a href="{{ team.linkedin_adress }}" class="fab fa-linkedin"></a></li>
+                <li><a href="mailto:{{team.mail}}" class="fa-solid fa-envelope"></a></li>
+                <li><a href="{{ team.instagram_adress }}" class="fab fa-instagram"></a></li>
+                <i class=""></i>
+                <i class=""></i>
+            </ul>
         </div>
-      
+        <div class="team-content">
+            <div class="team-info">
+                <h3 class="title">{{team.header}}</h3>
+            </div>
+        </div>
     </div>
 </div>

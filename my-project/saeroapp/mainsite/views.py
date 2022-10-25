@@ -2,7 +2,7 @@ from django.http.response import HttpResponse
 from pickle import TRUE
 from unicodedata import category
 from django.shortcuts import render
-from .models import staff, Category, Sponsors,Carousel,managestaff
+from .models import staff, Category, Sponsors,Carousel,managestaff,gallery,homeintro, teams
 
 
 
@@ -38,25 +38,38 @@ data={
 def index(request):
     sponsors=Sponsors.objects.all()
     obj=Carousel.objects.all()
+    galeri=gallery.objects.all()
+    homegiris=homeintro.objects.all()
+    takim=teams.objects.all()
+
     context={
         "sponsors":sponsors,
-        "obj":obj
+        "obj":obj,
+        "galeri":galeri,
+        "homegiris":homegiris,
+        "takim":takim
+
 
     }
     return render(request,"home.html",context)
 
 def about(request):
-    teams=Category.objects.all()
+    teamss=Category.objects.all()
+    takim=teams.objects.all()
     context={
-        "teams":teams,
+        "teams":teamss,
         "persons":managestaff.objects.filter(is_active=True),
+        "takim":takim
+
     }
     return render(request,"about.html",context)
 
 def team(request):
     context={
         "persons":staff.objects.filter(is_active=True),
-        "categories":Category.objects.all()
+        "categories":Category.objects.all(),
+        "takim":teams.objects.all()
+
     }
     return render(request,"team.html",context)
 
@@ -71,9 +84,12 @@ def team_details(request,slug):
 
 def manageteam_details(request,slug):
     team=managestaff.objects.get(slug=slug)
+    takim=teams.objects.all()
+
     return render(request,"manageteam-detail.html",{
         "team":team,
-        "person":managestaff.objects.get(slug=slug)
+        "person":managestaff.objects.get(slug=slug),
+         "takim":takim,
     })    
 
 def staff_by_category(request,slug):
